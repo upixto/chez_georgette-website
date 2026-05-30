@@ -432,22 +432,46 @@ a { text-decoration: none; }
   line-height: 1.6;
 }
 
-.objets-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
+.objets-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
   margin-bottom: 18px;
 }
 
-.objet-tag {
+.objet-card {
   background: var(--blanc);
   border: 1.5px solid var(--bleu-pale);
+  border-radius: 14px;
+  padding: 14px 8px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.objet-card:hover {
+  border-color: var(--rose);
+  box-shadow: 0 2px 10px rgba(217, 136, 131, 0.15);
+}
+
+.objet-card svg {
+  width: 28px;
+  height: 28px;
   color: var(--bleu);
-  font-size: 12px;
-  font-weight: 700;
+}
+
+.objet-card span {
   font-family: var(--font-body);
-  padding: 5px 12px;
-  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--texte);
+  text-align: center;
+}
+
+@media (max-width: 680px) {
+  .objets-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
 .brocante-encart-rose {
@@ -608,6 +632,74 @@ a { text-decoration: none; }
   color: var(--rose);
 }
 
+/* Article avec deux tarifs : les prix s'empilent à droite */
+.menu-item--multi {
+  align-items: flex-start;
+}
+
+.menu-item--multi .menu-item__name {
+  padding-top: 2px;
+}
+
+.menu-item__tarifs {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+  padding-left: 8px;
+}
+
+/* Chaque ligne tarif : label à gauche (wrappable), prix ancré à droite */
+.menu-item__tarifs .menu-item__prix {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  width: 100%;
+  white-space: normal;
+}
+
+.menu-item__tarif-label {
+  flex: 1;
+  min-width: 0;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.menu-item__tarif-prix {
+  flex-shrink: 0;
+}
+
+/* Logo marque inline dans le nom de l'article */
+.menu-item__logo {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 6px;
+  vertical-align: middle;
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.menu-item__logo:hover {
+  opacity: 1;
+}
+
+.menu-item__logo img {
+  height: 14px;
+  width: auto;
+  display: inline;
+}
+
+.menu-item__tarif-label {
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--texte-doux);
+  flex: 1;
+  min-width: 0;
+}
+
 /* ============================================================
    SECTION INFOS
    ============================================================ */
@@ -734,6 +826,24 @@ footer {
 }
 
 .footer__adresse { margin-bottom: 6px; }
+
+.footer__avis {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  color: #FFF6E1;
+  background: rgba(255,246,225,0.08);
+  border: 1px solid rgba(255,246,225,0.2);
+  padding: 6px 16px;
+  border-radius: 50px;
+  transition: background 0.2s;
+}
+
+.footer__avis:hover {
+  background: rgba(255,246,225,0.16);
+}
 
 /* ============================================================
    UTILITAIRES

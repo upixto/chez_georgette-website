@@ -1,0 +1,96 @@
+{
+  "chauds": {
+    "sections": [
+      {
+        "titre": "Cafés",
+        "articles": [
+          { "nom": "Café Espresso", "prix": "1,60 €" },
+          { "nom": "Double Espresso", "prix": "2,00 €" },
+          { "nom": "Café Brésil", "prix": "1,50 €" },
+          { "nom": "Café décaféiné", "prix": "1,50 €" },
+          { "nom": "Café au lait", "prix": "1,50 €" },
+          { "nom": "Cappuccino", "prix": "2,50 €" },
+          { "nom": "Café Viennois", "prix": "3,00 €" },
+          { "nom": "Café Frappé", "prix": "3,50 €" }
+        ]
+      },
+      {
+        "titre": "Chocolats",
+        "articles": [
+          { "nom": "Petit Chocolat Chaud", "prix": "2,00 €" },
+          { "nom": "Chocolat Chaud", "prix": "3,50 €" },
+          { "nom": "Chocolat Viennois", "prix": "3,50 €" },
+          { "nom": "Chocolat de Noël", "prix": "4,00 €" }
+        ]
+      },
+      {
+        "titre": "Infusions",
+        "articles": [
+          { "nom": "Infusion Bio Citron Gingembre", "prix": "2,60 €" }
+        ]
+      }
+    ]
+  },
+
+  "froids": {
+    "sections": [
+      {
+        "titre": "Limonades & Sodas",
+        "articles": [
+          {
+            "nom": "Mortuacienne",
+            "tarifs": [
+              { "label": "Nature", "prix": "3,20 €" },
+              { "label": "Cola · Citron · Orange · Menthe Citron · Pamplemousse", "prix": "3,50 €" }
+            ]
+          },
+          { "nom": "Diabolo", "prix": "2,80 €" },
+          { "nom": "Fuze Tea", "prix": "3,20 €" },
+          { "nom": "Perrier", "prix": "3,20 €" },
+          { "nom": "Schweppes Agrumes", "prix": "3,00 €" },
+          {
+            "nom": "Coca",
+            "tarifs": [
+              { "label": "Classique", "prix": "3,50 €" },
+              { "label": "Zéro", "prix": "3,50 €" }
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Eaux & Jus",
+        "articles": [
+          { "nom": "1/2 Eau Pétillante", "prix": "2,80 €" },
+          { "nom": "1/2 Eau Plate", "prix": "2,50 €" },
+          {
+            "nom": "Jus de fruit",
+            "tarifs": [
+              { "label": "Jus de rêve", "prix": "4,20 €" },
+              { "label": "Emile Vergeois", "prix": "4,70 €" }
+            ]
+          },
+          { "nom": "Infusion Froide (Symples)", "prix": "4,20 €" }
+        ]
+      },
+      {
+        "titre": "Cocktails sans alcool",
+        "articles": [
+          {
+            "nom": "Virgin Mojito",
+            "tarifs": [
+              { "label": "Classique", "prix": "4,50 €" },
+              { "label": "Fraise", "prix": "5,00 €" }
+            ]
+          }
+        ]
+      },
+      {
+        "titre": "Bières",
+        "articles": [
+          { "nom": "Bière artisanale (La Nocturne)", "prix": "4,80 €" },
+          { "nom": "Bière pression", "prix": "3,80 €" }
+        ]
+      }
+    ]
+  }
+}
