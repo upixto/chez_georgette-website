@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laisser un avis — Chez Georgette</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/cup.png">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: var(--bleu);
+      padding: 5%;
+    }
+
+    .avis-card {
+      background: var(--creme);
+      border-radius: 28px;
+      padding: 48px 40px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.18);
+    }
+
+    .avis-card img {
+      height: 52px;
+      width: auto;
+      margin: 0 auto 24px;
+    }
+
+    .avis-card h1 {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 5vw, 2.2rem);
+      color: var(--bleu);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .avis-card p {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--texte-doux);
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .btn-avis {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--rose);
+      color: var(--blanc);
+      font-family: var(--font-display);
+      font-size: 18px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn-avis:hover { opacity: 0.88; }
+
+    /* Message de remerciement (caché par défaut) */
+    .merci {
+      display: none;
+      margin-top: 28px;
+      background: var(--bleu);
+      border-radius: 16px;
+      padding: 20px 24px;
+    }
+
+    .merci p {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--creme);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .merci strong {
+      font-family: var(--font-display);
+      font-size: 17px;
+      color: var(--creme);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .merci.visible { display: block; }
+
+    .retour {
+      display: inline-block;
+      margin-top: 24px;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--bleu-light);
+      text-decoration: none;
+    }
+
+    .retour:hover { color: var(--bleu); }
+  </style>
+</head>
+<body>
+
+  <div class="avis-card">
+    <h1>Vous avez aimé votre visite ?</h1>
+    <p>Votre avis compte beaucoup pour nous et aide d'autres personnes à nous découvrir. Merci d'avance !</p>
+
+    <a
+      href="https://g.page/r/CY_2JEAPZsD-EAE/review"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-avis"
+      id="btn-avis"
+    >
+      ⭐ Laisser un avis Google
+    </a>
+
+    <div class="merci" id="merci">
+      <strong>Merci infiniment ! 🙏</strong>
+      <p>Votre avis nous aide à grandir et à accueillir encore mieux nos prochains visiteurs. À très bientôt chez Georgette !</p>
+    </div>
+
+    <br>
+    <a href="index.html" class="retour">← Retour au site</a>
+  </div>
+
+  <script>
+    document.getElementById('btn-avis').addEventListener('click', () => {
+      document.getElementById('btn-avis').style.display = 'none';
+      document.getElementById('merci').classList.add('visible');
+    });
+  </script>
+
+</body>
+</html>
