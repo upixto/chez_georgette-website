@@ -1,0 +1,592 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chez Georgette — Salon de thé & Brocante · Vesoul</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/cup.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="prix.js"></script>
+</head>
+<body>
+
+<!-- ============================================================
+     BOUTON RETOUR EN HAUT
+     ============================================================ -->
+<button class="back-to-top" aria-label="Retour en haut">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFF6E1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="accueil" class="hero">
+
+  <div class="hero__pattern" style="background-image: url('images/pattern.png');"></div>
+
+  <div class="hero__content">
+    <span class="hero__badge">Salon de thé &amp; Brocante</span>
+
+    <img
+      src="images/cup.png"
+      alt="Mascotte tasse"
+      class="hero__cup"
+    >
+
+    <h1 class="hero__title">Chez Georgette</h1>
+
+    <p class="hero__subtitle">Un moment doux, une trouvaille inattendue.</p>
+
+    <div class="hero__actions">
+      <a href="#carte" class="btn btn--rose">Voir la carte</a>
+      <a href="#presentation" class="btn btn--outline-creme">Nous découvrir</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Wave bleu → crème -->
+<div class="wave" style="background:#4F729B;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,0 C360,60 1080,0 1440,60 L1440,60 L0,60 Z" fill="#FFF6E1"/>
+  </svg>
+</div>
+
+
+<!-- ============================================================
+     PRÉSENTATION
+     ============================================================ -->
+<section id="presentation" class="gg-section presentation">
+  <div class="gg-inner">
+    <div class="gg-grid2">
+
+      <!-- Colonne texte -->
+      <div>
+        <span class="tag">Qui sommes-nous ?</span>
+        <h2 class="section-title">Un salon chaleureux au cœur de Vesoul</h2>
+        <p class="section-body">
+          Au cœur du centre-ville de Vesoul, Chez Georgette vous accueille dans un espace unique
+          mêlant douceur du salon de thé et charme de la brocante. Venez vous poser, souffler,
+          et repartir avec un souvenir.
+        </p>
+
+        <div class="gg-grid-cards">
+          <div class="info-card">
+            <strong class="info-card__title">Horaires</strong>
+            <span class="info-card__desc">Du mardi au dimanche · 9h – 19h</span>
+          </div>
+          <div class="info-card">
+            <strong class="info-card__title">Adresse</strong>
+            <span class="info-card__desc">4 passage Jules Didier · 70000 Vesoul</span>
+          </div>
+          <div class="info-card">
+            <strong class="info-card__title">Boissons &amp; Douceurs</strong>
+            <span class="info-card__desc">Thés, cafés, chocolats et desserts maison</span>
+          </div>
+          <div class="info-card">
+            <strong class="info-card__title">Brocante</strong>
+            <span class="info-card__desc">Chaque objet autour de vous est à vendre !</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colonne photo -->
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <!--
+          PHOTO 1 — Remplacez src="" par le chemin de votre photo (ex: src="photos/salle.jpg")
+          Si src est vide, un placeholder s'affiche automatiquement.
+        -->
+        <div class="img-slot img-slot--placeholder" style="height:280px;border-radius:24px;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <p>Photo de la salle / ambiance</p>
+        </div>
+
+        <div class="horaires-bloc">
+          <strong>Fermé le lundi</strong>
+          Du mardi au dimanche · 9h00 – 19h00
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Wave crème → bleu (retournée) -->
+<div class="wave" style="background:#FFF6E1;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,60 C360,0 1080,60 1440,0 L1440,60 L0,60 Z" fill="#4F729B"/>
+  </svg>
+</div>
+
+
+<!-- ============================================================
+     BRUNCH
+     ============================================================ -->
+<section id="brunch" class="gg-section brunch">
+  <div class="gg-inner">
+    <div class="gg-grid2">
+
+      <!-- Colonne photo -->
+      <div>
+        <!--
+          PHOTO 2 — Remplacez src="" par le chemin de votre photo (ex: src="photos/brunch.jpg")
+        -->
+        <div class="img-slot img-slot--placeholder" style="height:340px;border-radius:24px;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <p>Photo du brunch du dimanche</p>
+        </div>
+      </div>
+
+      <!-- Colonne texte -->
+      <div>
+        <span class="tag tag--rose">Le Brunch du dimanche</span>
+        <h2>Chaque dimanche, de 11h30 à 13h00</h2>
+        <p class="brunch__intro">
+          Le brunch se savoure en trois temps :
+          <strong>sucré, salé, puis dessert</strong>.
+          Une formule pensée pour souffler et profiter.
+        </p>
+
+        <div class="flex-col" style="margin-bottom:20px;">
+          <div class="brunch-step">
+            <span class="brunch-step__num">1</span>
+            <div>
+              <strong class="brunch-step__label">Sucré</strong>
+              <span class="brunch-step__desc">Viennoiseries, confitures maison, fruits frais…</span>
+            </div>
+          </div>
+          <div class="brunch-step">
+            <span class="brunch-step__num">2</span>
+            <div>
+              <strong class="brunch-step__label">Salé</strong>
+              <span class="brunch-step__desc">Assiettes composées, charcuterie, fromages…</span>
+            </div>
+          </div>
+          <div class="brunch-step">
+            <span class="brunch-step__num">3</span>
+            <div>
+              <strong class="brunch-step__label">Dessert</strong>
+              <span class="brunch-step__desc">Une touche sucrée pour finir en beauté.</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="brunch__note">Le reste, on vous laisse le découvrir en venant le tester !</p>
+
+        <a href="#infos" class="btn btn--rose" style="font-size:14px;">Je veux réserver !</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Wave bleu → crème -->
+<div class="wave" style="background:#4F729B;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,0 C360,60 1080,0 1440,60 L1440,60 L0,60 Z" fill="#FFF6E1"/>
+  </svg>
+</div>
+
+
+<!-- ============================================================
+     BROCANTE
+     ============================================================ -->
+<section id="brocante" class="gg-section brocante">
+  <div class="gg-inner">
+    <div class="gg-grid2-top">
+
+      <!-- Colonne texte -->
+      <div>
+        <span class="tag tag--rose">La Brocante</span>
+        <h2 class="section-title">
+          Un coup de coeur pour votre tasse ?<br>
+          <span style="color:var(--rose);">Repartez avec !</span>
+        </h2>
+        <p class="section-body">
+          Chez Georgette, tout ce que vous utilisez autour de vous est un objet de brocante
+          que vous pouvez acheter et emporter chez vous.
+        </p>
+
+        <div class="flex-col">
+          <div class="brocante-card">
+            <strong class="brocante-card__title">Chaque objet a son prix</strong>
+            <span class="brocante-card__desc">Une étiquette discrète sur chaque pièce. Si vous craquez, parlez-en à l'équipe !</span>
+          </div>
+          <div class="brocante-card">
+            <strong class="brocante-card__title">Le décor se renouvelle</strong>
+            <span class="brocante-card__desc">La salle change au fil des achats. Chaque visite est une nouvelle découverte.</span>
+          </div>
+          <div class="brocante-card">
+            <strong class="brocante-card__title">Des pièces choisies avec soin</strong>
+            <span class="brocante-card__desc">Vaisselle vintage, objets de cuisine, petits meubles… un univers authentique.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colonne droite -->
+      <div>
+        <div class="objets-tags">
+          <span class="objet-tag">Tasses</span>
+          <span class="objet-tag">Théières</span>
+          <span class="objet-tag">Petites cuillères</span>
+          <span class="objet-tag">Vaisselle</span>
+          <span class="objet-tag">Bougies</span>
+          <span class="objet-tag">Cadres</span>
+          <span class="objet-tag">Vases</span>
+          <span class="objet-tag">Livres</span>
+        </div>
+
+        <div class="brocante-encart-rose">
+          <p>Un coup de cœur pendant votre pause thé ?<br>On emballe pour vous.</p>
+          <a href="#infos" class="btn--blanc-rose">Nous contacter</a>
+        </div>
+
+        <div class="brocante-encart-vente">
+          <strong>Vente à emporter</strong>
+          <p>
+            Gâteaux et sucreries sur commande.
+            <strong style="color:var(--bleu);">Contactez-nous par téléphone.</strong>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Wave crème → bleu (retournée) -->
+<div class="wave" style="background:#FFF6E1;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,60 C360,0 1080,60 1440,0 L1440,60 L0,60 Z" fill="#4F729B"/>
+  </svg>
+</div>
+
+
+<!-- ============================================================
+     CARTE
+     ============================================================ -->
+<section id="carte" class="gg-section carte">
+  <div class="gg-inner">
+
+    <div class="carte__intro">
+      <span class="tag">Notre carte</span>
+      <h2>De quoi vous faire plaisir</h2>
+      <p>Des boissons chaudes réconfortantes aux rafraîchissements fruités.</p>
+    </div>
+
+    <div class="gg-grid-menu">
+
+      <!-- BOISSONS CHAUDES -->
+      <div class="menu-card">
+        <div class="menu-card__header menu-card__header--bleu">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- tasse -->
+            <path d="M8 14 L10 28 H26 L28 14 Z" stroke="#FFF6E1" stroke-width="2" stroke-linejoin="round"/>
+            <!-- anse -->
+            <path d="M28 17 Q34 17 34 21 Q34 25 28 25" stroke="#FFF6E1" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <!-- vapeur 1 -->
+            <path d="M14 10 Q13 8 14 6" stroke="#FFF6E1" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <!-- vapeur 2 -->
+            <path d="M18 11 Q17 8.5 18 6" stroke="#FFF6E1" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <!-- vapeur 3 -->
+            <path d="M22 10 Q21 8 22 6" stroke="#FFF6E1" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+          </svg>
+          <div>
+            <h3>Boissons Chaudes</h3>
+            <p>Café, thé, chocolat…</p>
+          </div>
+        </div>
+        <div class="menu-card__body">
+
+          <div class="menu-cat">Cafés</div>
+          <div class="menu-item">
+            <span class="menu-item__name">Café Espresso</span>
+            <span class="menu-item__prix" data-prix="espresso"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Double Espresso</span>
+            <span class="menu-item__prix" data-prix="doubleEspresso"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Café Brésil</span>
+            <span class="menu-item__prix" data-prix="bresil"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Café décaféiné</span>
+            <span class="menu-item__prix" data-prix="decaf"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Café au lait</span>
+            <span class="menu-item__prix" data-prix="auLait"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Cappuccino</span>
+            <span class="menu-item__prix" data-prix="cappuccino"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Café Viennois</span>
+            <span class="menu-item__prix" data-prix="viennoisCafe"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Café Frappé</span>
+            <span class="menu-item__prix" data-prix="frappe"></span>
+          </div>
+
+          <div class="menu-cat">Chocolats</div>
+          <div class="menu-item">
+            <span class="menu-item__name">Petit Chocolat Chaud</span>
+            <span class="menu-item__prix" data-prix="petitChoco"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Chocolat Chaud</span>
+            <span class="menu-item__prix" data-prix="choco"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Chocolat Viennois</span>
+            <span class="menu-item__prix" data-prix="viennoiseChoco"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Chocolat de Noël</span>
+            <span class="menu-item__prix" data-prix="noelChoco"></span>
+          </div>
+
+          <div class="menu-cat">Infusions</div>
+          <div class="menu-item">
+            <span class="menu-item__name">Infusion Bio Citron Gingembre</span>
+            <span class="menu-item__prix" data-prix="infusion"></span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BOISSONS FROIDES -->
+      <div class="menu-card">
+        <div class="menu-card__header menu-card__header--rose">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- verre -->
+            <path d="M8 6 L11 30 H25 L28 6 Z" stroke="#FFF6E1" stroke-width="2" stroke-linejoin="round" fill="none"/>
+            <!-- paille -->
+            <line x1="22" y1="6" x2="26" y2="20" stroke="#FFF6E1" stroke-width="2" stroke-linecap="round"/>
+            <!-- glaçon 1 -->
+            <rect x="12" y="14" width="5" height="5" rx="1.5" stroke="#FFF6E1" stroke-width="1.5" fill="none" transform="rotate(-15 14.5 16.5)"/>
+            <!-- glaçon 2 -->
+            <rect x="18" y="19" width="5" height="5" rx="1.5" stroke="#FFF6E1" stroke-width="1.5" fill="none" transform="rotate(10 20.5 21.5)"/>
+          </svg>
+          <div>
+            <h3>Boissons Froides</h3>
+            <p>Jus, sodas, limonades…</p>
+          </div>
+        </div>
+        <div class="menu-card__body">
+
+          <div class="menu-cat menu-cat--rose">Limonades &amp; Sodas</div>
+          <div class="menu-item">
+            <span class="menu-item__name">Maltousienne Nature</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="maltNature"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Maltousienne Citron</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="maltCitron"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Maltousienne Orange</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="maltOrange"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Maltousienne Pamplemousse</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="maltPamplemousse"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Diabolo</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="diabolo"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Faye Tea</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="fayeTea"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Schweppes Agrumes</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="schweppes"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Bière sans Alcool</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="biereNA"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Coca</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="coca"></span>
+          </div>
+
+          <div class="menu-cat menu-cat--rose">Eaux &amp; Jus</div>
+          <div class="menu-item">
+            <span class="menu-item__name">1/2 Eau Pétillante</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="eauPet"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">1/2 Eau Plate</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="eauPlate"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Jus de fruit frais</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="jus"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Infusion Froide</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="infFroide"></span>
+          </div>
+
+          <div class="menu-cat menu-cat--rose">Cocktails sans alcool</div>
+          <div class="menu-item">
+            <span class="menu-item__name">Virgin Mojito</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="mojito"></span>
+          </div>
+          <div class="menu-item">
+            <span class="menu-item__name">Bière artisanale</span>
+            <span class="menu-item__prix menu-item__prix--rose" data-prix="biereArt"></span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Wave bleu → crème -->
+<div class="wave" style="background:#4F729B;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,0 C360,60 1080,0 1440,60 L1440,60 L0,60 Z" fill="#FFF6E1"/>
+  </svg>
+</div>
+
+
+<!-- ============================================================
+     INFOS PRATIQUES
+     ============================================================ -->
+<section id="infos" class="gg-section infos">
+  <div class="gg-inner">
+    <div class="gg-grid-infos">
+
+      <!-- Colonne gauche -->
+      <div>
+        <span class="tag tag--rose">Infos pratiques</span>
+        <h2>Rendez-nous visite !</h2>
+        <p class="infos__intro">
+          On vous attend avec une tasse bien chaude et peut-être une petite trouvaille.
+        </p>
+
+        <div class="flex-col" style="margin-top:18px;">
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                <circle cx="12" cy="9" r="2.5"/>
+              </svg>
+            </div>
+            <div>
+              <strong class="contact-card__title">Adresse</strong>
+              <span class="contact-card__detail">4 passage Jules Didier · 70000 Vesoul</span>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .94h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <strong class="contact-card__title">Téléphone</strong>
+              <span class="contact-card__detail">09 83 49 83 87</span>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div>
+              <strong class="contact-card__title">Horaires</strong>
+              <span class="contact-card__detail">Mar – Dim : 9h00 – 19h00 · Fermé le lundi</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/chezgeorgette.vesoul/" target="_blank" rel="noopener noreferrer" class="social-link">Instagram</a>
+          <a href="https://www.facebook.com/chezgeorgette.vesoul/" target="_blank" rel="noopener noreferrer" class="social-link">Facebook</a>
+        </div>
+      </div>
+
+      <!-- Colonne droite -->
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <!--
+          PHOTO 3 — Remplacez src="" par le chemin de votre photo (ex: src="photos/devanture.jpg")
+        -->
+        <div class="img-slot img-slot--placeholder" style="height:240px;border-radius:18px;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-width="1.5">
+            <rect x="3" y="3" width="18" height="18" rx="3"/>
+            <circle cx="8.5" cy="8.5" r="1.5"/>
+            <polyline points="21 15 16 10 5 21"/>
+          </svg>
+          <p>Photo de la devanture / carte</p>
+        </div>
+
+        <div class="commandes-encart">
+          <strong>Commandes spéciales</strong>
+          <p>
+            Gâteaux et sucreries à emporter pour vos événements,
+            uniquement sur commande par téléphone.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Wave crème → dark (retournée) -->
+<div class="wave" style="background:#FFF6E1;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,60 C360,0 1080,60 1440,0 L1440,60 L0,60 Z" fill="#2e3a4a"/>
+  </svg>
+</div>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer>
+  <div class="footer__inner">
+    <img src="images/logo.png" alt="Chez Georgette" class="footer__logo">
+    <p class="footer__adresse">4 passage Jules Didier · 70000 Vesoul · 09 83 49 83 87</p>
+    <p class="footer__copy">© 2026 Chez Georgette · Salon de thé &amp; Brocante</p>
+  </div>
+</footer>
+
+
+<script src="main.js"></script>
+</body>
+</html>
