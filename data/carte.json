@@ -6,7 +6,7 @@
         "articles": [
           { "nom": "Café Espresso", "prix": "1,50 €" },
           { "nom": "Double Espresso", "prix": "3,00 €" },
-          { "nom": "Café allongé", "prix": "1,50 €" },
+          { "nom": "Café allongé", "prix": "1,70 €" },
           { "nom": "Café Brésil", "prix": "1,60 €" },
           { "nom": "Café décaféiné", "prix": "1,50 €" },
           { "nom": "Café au lait", "prix": "1,80 €" },
@@ -14,8 +14,7 @@
           { "nom": "Cappuccino", "prix": "3,30 €" },
           { "nom": "Café Viennois", "prix": "3,50 €" },
           { "nom": "Café Macchiato", "prix": "3,50 €" },
-          { "nom": "Café Frappé", "prix": "3,50 €" },
-          { "nom": "Café décaféiné", "prix": "1,70 €" }
+          { "nom": "Café Frappé", "prix": "3,50 €" }
         ]
       },
       {
