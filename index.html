@@ -219,7 +219,7 @@
   <div class="gg-inner">
     <div class="gg-grid2-top">
 
-      <!-- Colonne gauche : grille d'articles -->
+      <!-- Colonne gauche : intro + 3 cartes -->
       <div>
         <span class="tag tag--rose">La Brocante</span>
         <h2 class="section-title">
@@ -231,88 +231,6 @@
           que vous pouvez acheter et emporter chez vous.
         </p>
 
-        <div class="objets-grid">
-
-          <div class="objet-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Tasses : tasse avec anse -->
-              <path d="M5 7 L6 19 H18 L19 7 Z"/>
-              <path d="M19 10 Q23 10 23 13 Q23 16 19 16"/>
-            </svg>
-            <span>Tasses</span>
-          </div>
-
-          <div class="objet-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Théières : corps rond + bec + anse -->
-              <circle cx="12" cy="13" r="6"/>
-              <path d="M12 7 L12 5"/>
-              <circle cx="12" cy="4" r="1"/>
-              <path d="M18 11 Q22 9 21 14"/>
-              <path d="M6 11 Q3 9 3 13 Q3 16 6 15"/>
-            </svg>
-            <span>Théières</span>
-          </div>
-
-          <div class="objet-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Petites cuillères : cuillère -->
-              <path d="M12 20 L12 10"/>
-              <ellipse cx="12" cy="7" rx="3" ry="4"/>
-            </svg>
-            <span>Cuillères</span>
-          </div>
-
-          <div class="objet-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Vaisselle : assiette -->
-              <circle cx="12" cy="12" r="9"/>
-              <circle cx="12" cy="12" r="5"/>
-            </svg>
-            <span>Vaisselle</span>
-          </div>
-
-          <div class="objet-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Bougies : bougie avec flamme -->
-              <rect x="9" y="10" width="6" height="11" rx="1"/>
-              <path d="M12 10 L12 6"/>
-              <path d="M12 6 Q14 4 13 2 Q11 4 10 3 Q9 5 12 6 Z"/>
-            </svg>
-            <span>Bougies</span>
-          </div>
-
-          <div class="objet-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Cadres : cadre photo -->
-              <rect x="3" y="3" width="18" height="18" rx="2"/>
-              <rect x="7" y="7" width="10" height="10" rx="1"/>
-            </svg>
-            <span>Cadres</span>
-          </div>
-
-          <div class="objet-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Vases : vase -->
-              <path d="M9 3 H15 L17 9 Q19 13 17 17 Q15 21 12 21 Q9 21 7 17 Q5 13 7 9 Z"/>
-            </svg>
-            <span>Vases</span>
-          </div>
-
-          <div class="objet-card">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Livres : livre ouvert -->
-              <path d="M2 6 Q2 4 4 4 L12 6 L20 4 Q22 4 22 6 L22 18 Q22 20 20 20 L12 18 L4 20 Q2 20 2 18 Z"/>
-              <line x1="12" y1="6" x2="12" y2="18"/>
-            </svg>
-            <span>Livres</span>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- Colonne droite : 3 étapes -->
-      <div style="align-self:center;">
         <div class="flex-col">
           <div class="brocante-card">
             <strong class="brocante-card__title">Chaque objet a son prix</strong>
@@ -326,6 +244,81 @@
             <strong class="brocante-card__title">Des pièces choisies avec soin</strong>
             <span class="brocante-card__desc">Vaisselle vintage, objets de cuisine, petits meubles… un univers authentique.</span>
           </div>
+        </div>
+      </div>
+
+      <!-- Colonne droite : grille d'articles + encart -->
+      <div style="align-self:center;display:flex;flex-direction:column;justify-content:center;">
+
+        <div class="objets-grid">
+
+          <div class="objet-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 7 L6 19 H18 L19 7 Z"/>
+              <path d="M19 10 Q23 10 23 13 Q23 16 19 16"/>
+            </svg>
+            <span>Tasses</span>
+          </div>
+
+          <div class="objet-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="13" r="6"/>
+              <path d="M12 7 L12 5"/>
+              <circle cx="12" cy="4" r="1"/>
+              <path d="M18 11 Q22 9 21 14"/>
+              <path d="M6 11 Q3 9 3 13 Q3 16 6 15"/>
+            </svg>
+            <span>Théières</span>
+          </div>
+
+          <div class="objet-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 20 L12 10"/>
+              <ellipse cx="12" cy="7" rx="3" ry="4"/>
+            </svg>
+            <span>Cuillères</span>
+          </div>
+
+          <div class="objet-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="9"/>
+              <circle cx="12" cy="12" r="5"/>
+            </svg>
+            <span>Vaisselle</span>
+          </div>
+
+          <div class="objet-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="10" width="6" height="11" rx="1"/>
+              <path d="M12 10 L12 6"/>
+              <path d="M12 6 Q14 4 13 2 Q11 4 10 3 Q9 5 12 6 Z"/>
+            </svg>
+            <span>Bougies</span>
+          </div>
+
+          <div class="objet-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <rect x="7" y="7" width="10" height="10" rx="1"/>
+            </svg>
+            <span>Cadres</span>
+          </div>
+
+          <div class="objet-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 3 H15 L17 9 Q19 13 17 17 Q15 21 12 21 Q9 21 7 17 Q5 13 7 9 Z"/>
+            </svg>
+            <span>Vases</span>
+          </div>
+
+          <div class="objet-card">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 6 Q2 4 4 4 L12 6 L20 4 Q22 4 22 6 L22 18 Q22 20 20 20 L12 18 L4 20 Q2 20 2 18 Z"/>
+              <line x1="12" y1="6" x2="12" y2="18"/>
+            </svg>
+            <span>Livres</span>
+          </div>
+
         </div>
 
         <div class="brocante-encart-rose" style="margin-top:14px;">
@@ -541,7 +534,7 @@
     <a href="https://g.page/r/CY_2JEAPZsD-EAE/review" target="_blank" rel="noopener noreferrer" class="footer__avis">
       ⭐ Laisser un avis sur Google
     </a>
-    <p class="footer__copy">© 2026 Chez Georgette · Salon de thé &amp; Brocante · <button class="footer__mentions" id="btn-mentions">Mentions légales</button></p>
+    <p class="footer__copy">© 2026 Chez Georgette · Tous droits réservés · <button class="footer__mentions" id="btn-mentions">Mentions légales</button></p>
   </div>
 </footer>
 
