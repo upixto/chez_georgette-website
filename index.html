@@ -78,11 +78,11 @@
         <div class="gg-grid-cards">
           <div class="info-card">
             <strong class="info-card__title">Horaires</strong>
-            <span class="info-card__desc">Du mardi au dimanche · 9h – 19h</span>
+            <span class="info-card__desc">Mar – Dim · 9h – 19h<br><span style="color:var(--rose);font-weight:700;">Fermé le lundi</span></span>
           </div>
           <div class="info-card">
             <strong class="info-card__title">Adresse</strong>
-            <span class="info-card__desc">4 Passage Jules Didier · 70000 Vesoul</span>
+            <a href="geo:47.6224,6.1559?q=4+Passage+Jules+Didier,+70000+Vesoul" id="lien-itineraire-2" class="info-card__desc contact-card__link">4 Passage Jules Didier<br>70000 Vesoul</a>
           </div>
           <div class="info-card">
             <strong class="info-card__title">Boissons &amp; Douceurs</strong>
@@ -423,84 +423,102 @@
           On vous attend avec une tasse bien chaude et peut-être une petite trouvaille.
         </p>
 
-        <div class="flex-col" style="margin-top:18px;">
+        <div class="contact-grid" style="margin-top:18px;">
+
+          <!-- Adresse -->
           <div class="contact-card">
             <div class="contact-card__icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
                 <circle cx="12" cy="9" r="2.5"/>
               </svg>
             </div>
             <div>
               <strong class="contact-card__title">Adresse</strong>
-              <span class="contact-card__detail">4 Passage Jules Didier · 70000 Vesoul</span>
+              <a href="geo:47.6224,6.1559?q=4+Passage+Jules+Didier,+70000+Vesoul" id="lien-itineraire" class="contact-card__detail contact-card__link">4 Passage Jules Didier · Vesoul</a>
             </div>
           </div>
 
+          <!-- Téléphone -->
           <div class="contact-card">
             <div class="contact-card__icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .94h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
               </svg>
             </div>
             <div>
               <strong class="contact-card__title">Téléphone</strong>
-              <span class="contact-card__detail">09 83 49 83 87</span>
+              <a href="tel:+33983498387" class="contact-card__detail contact-card__link">09 83 49 83 87</a>
             </div>
           </div>
 
+          <!-- Horaires -->
           <div class="contact-card">
             <div class="contact-card__icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"/>
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
             </div>
             <div>
               <strong class="contact-card__title">Horaires</strong>
-              <span class="contact-card__detail">Mar – Dim : 9h00 – 19h00 · Fermé le lundi</span>
+              <span class="contact-card__detail">
+                <span class="horaire-ligne"><span>Lundi</span><span class="horaire-ferme">Fermé</span></span>
+                <span class="horaire-ligne"><span>Mardi – Dimanche</span><span>9h – 19h</span></span>
+                <span class="horaire-note">Les horaires peuvent varier les jours fériés ou en période de vacances. En cas de doute, retrouvez nos horaires mis à jour sur notre fiche <a href="https://maps.app.goo.gl/gsRcGTiB2UF8qiqy8" target="_blank" rel="noopener noreferrer">Google</a>.</span>
+              </span>
             </div>
           </div>
+
+          <!-- Instagram + Facebook empilés à droite des horaires -->
+          <div class="contact-social-col">
+
+            <div class="contact-card">
+              <div class="contact-card__icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.31.975.975 1.247 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.31 3.608-.975.975-2.242 1.247-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.31-.975-.975-1.247-2.242-1.31-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.31-3.608.975-.975 2.242-1.247 3.608-1.31C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+              </div>
+              <div>
+                <strong class="contact-card__title">Instagram</strong>
+                <a href="https://www.instagram.com/chezgeorgette.vesoul/" target="_blank" rel="noopener noreferrer" class="contact-card__detail contact-card__link">@chezgeorgette.vesoul</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-card__icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.266h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
+                </svg>
+              </div>
+              <div>
+                <strong class="contact-card__title">Facebook</strong>
+                <a href="https://www.facebook.com/chezgeorgette.vesoul/" target="_blank" rel="noopener noreferrer" class="contact-card__detail contact-card__link">Chez Georgette Vesoul</a>
+              </div>
+            </div>
+
+          </div>
+
         </div>
 
-        <p class="social-label">Suivez-nous sur</p>
-        <div class="social-links">
-          <a href="https://www.instagram.com/chezgeorgette.vesoul/" target="_blank" rel="noopener noreferrer" class="social-link">
-            <div class="social-link__icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.31.975.975 1.247 2.242 1.31 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.31 3.608-.975.975-2.242 1.247-3.608 1.31-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.31-.975-.975-1.247-2.242-1.31-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.31-3.608.975-.975 2.242-1.247 3.608-1.31C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-              </svg>
-            </div>
-            Instagram
-          </a>
-          <a href="https://www.facebook.com/chezgeorgette.vesoul/" target="_blank" rel="noopener noreferrer" class="social-link">
-            <div class="social-link__icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.235 2.686.235v2.97h-1.513c-1.491 0-1.956.93-1.956 1.886v2.266h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/>
-              </svg>
-            </div>
-            Facebook
-          </a>
-        </div>
       </div>
 
       <!-- Colonne droite -->
-      <div style="display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;flex-direction:column;gap:12px;align-self:stretch;justify-content:center;">
 
         <div class="img-slot" style="height:240px;border-radius:18px;">
           <img src="images/enseigne.webp" alt="Enseigne du salon de thé">
         </div>
 
-        <div class="commandes-encart">
-          <strong>Commandes spéciales</strong>
-          <p>
-            Gâteaux et sucreries à emporter pour vos événements,
-            uniquement sur commande par téléphone.
-          </p>
-        </div>
       </div>
 
     </div>
+
+    <div class="commandes-encart commandes-encart--full">
+      <strong>Groupes &amp; Événements</strong>
+      <p>Nous accueillons les groupes et organisons des événements sur demande. Venez nous en parler sur place, on sera ravis d'en discuter !</p>
+    </div>
+
   </div>
 </section>
 

@@ -789,14 +789,25 @@ a { text-decoration: none; }
   margin-bottom: 4px;
 }
 
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
 .contact-card {
   background: var(--blanc);
   border: 2px solid var(--bleu-pale);
   border-radius: 16px;
   padding: 14px 18px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
+}
+
+.contact-card--social {
+  align-items: flex-start;
 }
 
 .contact-card__icon {
@@ -810,6 +821,11 @@ a { text-decoration: none; }
   flex-shrink: 0;
 }
 
+.contact-card > div:last-child {
+  flex: 1;
+  min-width: 0;
+}
+
 .contact-card__title {
   font-family: var(--font-display);
   color: var(--bleu);
@@ -821,6 +837,50 @@ a { text-decoration: none; }
   font-family: var(--font-body);
   font-size: 12px;
   color: var(--texte-doux);
+  display: block;
+}
+
+.contact-card__link {
+  color: var(--bleu);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.contact-card__link:hover { color: var(--rose); }
+
+.horaire-ligne {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 2px 0;
+  width: 100%;
+}
+
+.horaire-ligne span:last-child {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.horaire-ferme {
+  color: var(--rose);
+  font-weight: 700;
+}
+
+.horaire-note {
+  display: block;
+  margin-top: 7px;
+  font-size: 10px;
+  color: var(--texte-doux);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.horaire-note a {
+  color: var(--bleu);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .social-label {
@@ -837,6 +897,26 @@ a { text-decoration: none; }
 .social-links {
   display: flex;
   gap: 9px;
+}
+
+.contact-card--social .social-links {
+  flex-direction: column;
+}
+
+.social-links-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.social-links-stack .social-link {
+  width: 100%;
+}
+
+.contact-social-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .social-link {
@@ -872,6 +952,24 @@ a { text-decoration: none; }
   border-radius: 16px;
   padding: 16px 20px;
   text-align: center;
+}
+
+.commandes-encart--full {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  text-align: left;
+  padding: 20px 28px;
+}
+
+.commandes-encart--full strong {
+  white-space: nowrap;
+}
+
+.commandes-encart--full p {
+  margin: 0;
 }
 
 .commandes-encart strong {
