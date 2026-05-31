@@ -69,6 +69,19 @@ document.querySelectorAll('.carrousel').forEach(carrousel => {
 });
 
 
+// --- Popup mentions légales ---
+const overlay    = document.getElementById('mentions-overlay');
+const btnMentions = document.getElementById('btn-mentions');
+const btnClose   = document.getElementById('mentions-close');
+
+if (overlay && btnMentions) {
+  btnMentions.addEventListener('click', () => overlay.classList.add('visible'));
+  btnClose.addEventListener('click',    () => overlay.classList.remove('visible'));
+  overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('visible'); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.classList.remove('visible'); });
+}
+
+
 // --- Bouton "Retour en haut" ---
 const btnTop = document.querySelector('.back-to-top');
 if (btnTop) {

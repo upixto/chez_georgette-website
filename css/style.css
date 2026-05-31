@@ -938,6 +938,112 @@ footer {
 }
 
 /* ============================================================
+   POPUP MENTIONS LÉGALES
+   ============================================================ */
+.mentions-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(46, 58, 74, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+
+.mentions-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mentions-card {
+  background: var(--creme);
+  border-radius: 24px;
+  padding: 36px 32px 28px;
+  max-width: 520px;
+  width: 100%;
+  max-height: 85svh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 12px 48px rgba(0,0,0,0.2);
+}
+
+.mentions-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--bleu-pale);
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--bleu);
+  transition: background 0.2s;
+}
+
+.mentions-close:hover { background: var(--bleu); color: var(--creme); }
+
+.mentions-titre {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--bleu);
+  margin-bottom: 20px;
+}
+
+.mentions-bloc {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--creme-fonce);
+}
+
+.mentions-bloc:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.mentions-bloc strong {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--bleu);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.mentions-bloc p {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--texte-doux);
+  line-height: 1.7;
+}
+
+.mentions-bloc a {
+  color: var(--rose);
+  font-weight: 700;
+}
+
+.footer__mentions {
+  background: none;
+  border: none;
+  color: #6b7f8a;
+  font-family: var(--font-body);
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+.footer__mentions:hover { color: var(--creme); }
+
+/* ============================================================
    UTILITAIRES
    ============================================================ */
 .text-center { text-align: center; }
