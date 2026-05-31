@@ -49,6 +49,26 @@ fetch('data/carte.json')
   });
 
 
+// --- Carrousels ---
+document.querySelectorAll('.carrousel').forEach(carrousel => {
+  const piste    = carrousel.querySelector('.carrousel__piste');
+  const points   = carrousel.querySelectorAll('.carrousel__point');
+  const nbSlides = carrousel.querySelectorAll('.carrousel__piste img').length;
+  let index = 0;
+
+  function allerA(i) {
+    index = (i + nbSlides) % nbSlides;
+    piste.style.transform = `translateX(-${index * 100}%)`;
+    points.forEach((p, j) => p.classList.toggle('carrousel__point--actif', j === index));
+  }
+
+  carrousel.querySelector('.carrousel__btn--prev').addEventListener('click', () => allerA(index - 1));
+  carrousel.querySelector('.carrousel__btn--next').addEventListener('click', () => allerA(index + 1));
+
+  setInterval(() => allerA(index + 1), 4000);
+});
+
+
 // --- Bouton "Retour en haut" ---
 const btnTop = document.querySelector('.back-to-top');
 if (btnTop) {

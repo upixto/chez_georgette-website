@@ -168,6 +168,71 @@ a { text-decoration: none; }
 }
 
 /* ============================================================
+   CARROUSEL
+   ============================================================ */
+.carrousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.carrousel__piste {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+
+.carrousel__piste img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.carrousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.35);
+  border: none;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 2;
+}
+
+.carrousel__btn:hover { background: rgba(0,0,0,0.55); }
+
+.carrousel__btn--prev { left: 10px; }
+.carrousel__btn--next { right: 10px; }
+
+.carrousel__points {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.carrousel__point {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  transition: background 0.2s;
+}
+
+.carrousel__point--actif { background: white; }
+
+/* ============================================================
    BACK TO TOP (bouton fixe)
    ============================================================ */
 .back-to-top {
@@ -758,21 +823,48 @@ a { text-decoration: none; }
   color: var(--texte-doux);
 }
 
+.social-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--texte-doux);
+  margin-top: 18px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
 .social-links {
   display: flex;
   gap: 9px;
-  margin-top: 18px;
 }
 
 .social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
   background: var(--blanc);
   border: 1.5px solid var(--bleu-pale);
   border-radius: 10px;
-  padding: 8px 18px;
+  padding: 8px 16px 8px 8px;
   color: var(--bleu);
   font-family: var(--font-body);
   font-weight: 700;
   font-size: 12px;
+  transition: border-color 0.2s;
+}
+
+.social-link:hover { border-color: var(--bleu); }
+
+.social-link__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--rose);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .commandes-encart {
