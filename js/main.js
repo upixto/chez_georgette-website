@@ -69,23 +69,6 @@ document.querySelectorAll('.carrousel').forEach(carrousel => {
 });
 
 
-// --- Lien itinéraire : geo: sur mobile, Google Maps en fallback ---
-function gererItineraire(e) {
-  e.preventDefault();
-  const gmaps = 'https://maps.app.goo.gl/gsRcGTiB2UF8qiqy8';
-  const geo   = 'geo:47.6224,6.1559?q=4+Passage+Jules+Didier,+70000+Vesoul';
-  if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-    window.location.href = geo;
-    setTimeout(() => window.open(gmaps, '_blank'), 1500);
-  } else {
-    window.open(gmaps, '_blank');
-  }
-}
-
-['lien-itineraire', 'lien-itineraire-2'].forEach(id => {
-  const el = document.getElementById(id);
-  if (el) el.addEventListener('click', gererItineraire);
-});
 
 
 // --- Popup mentions légales ---
