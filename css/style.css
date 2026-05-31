@@ -100,6 +100,7 @@ a { text-decoration: none; }
   /* Empêche les débordements horizontaux sur mobile */
   .img-slot, .carrousel { max-width: 100% !important; }
   .social-link { width: 100%; }
+
 }
 
 @media (max-width: 400px) {
@@ -1176,6 +1177,9 @@ footer {
    UTILITAIRES
    ============================================================ */
 .text-center { text-align: center; }
+
+.br-mobile { display: none; }
+@media (max-width: 680px) { .br-mobile { display: block; } }
 
 .section-title {
   font-family: var(--font-display);
