@@ -556,28 +556,26 @@
 
 
 <!-- ============================================================
-     POPUP FERMETURE TEMPORAIRE
+     POPUP ALERTE
      ============================================================ -->
-<div class="fermeture-overlay" id="fermeture-overlay" role="dialog" aria-modal="true" aria-label="Fermeture temporaire">
-  <div class="fermeture-card">
-    <button class="mentions-close" id="fermeture-close" aria-label="Fermer">
+<div class="alerte-overlay" id="alerte-overlay" role="dialog" aria-modal="true" aria-label="Alerte">
+  <div class="alerte-card">
+    <button class="mentions-close" id="alerte-close" aria-label="Fermer">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
 
-    <div class="fermeture-icone">
+    <div class="alerte-icone">
       <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="3" y="4" width="18" height="18" rx="2"/>
-        <line x1="16" y1="2" x2="16" y2="6"/>
-        <line x1="8" y1="2" x2="8" y2="6"/>
-        <line x1="3" y1="10" x2="21" y2="10"/>
-        <line x1="9" y1="16" x2="15" y2="16"/>
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="11" x2="12" y2="16"/>
+        <line x1="12" y1="8" x2="12.01" y2="8"/>
       </svg>
     </div>
 
-    <h2 class="fermeture-titre" id="fermeture-titre">Fermeture temporaire</h2>
-    <p class="fermeture-message" id="fermeture-message"></p>
+    <h2 class="alerte-titre" id="alerte-titre"></h2>
+    <p class="alerte-message" id="alerte-message"></p>
 
-    <button class="btn btn--rose fermeture-btn" id="fermeture-btn">À bientôt !</button>
+    <button class="btn btn--rose alerte-btn" id="alerte-btn">C'est noté !</button>
   </div>
 </div>
 

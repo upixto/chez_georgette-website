@@ -96,36 +96,36 @@ if (btnTop) {
 }
 
 
-// --- Popup fermeture temporaire ---
-const fermetureOverlay = document.getElementById('fermeture-overlay');
-const fermetureClose   = document.getElementById('fermeture-close');
-const fermetureBtn     = document.getElementById('fermeture-btn');
+// --- Popup alerte ---
+const alerteOverlay = document.getElementById('alerte-overlay');
+const alerteClose   = document.getElementById('alerte-close');
+const alerteBtn     = document.getElementById('alerte-btn');
 
-function fermerPopupFermeture() {
-  if (fermetureOverlay) fermetureOverlay.classList.remove('visible');
-  sessionStorage.setItem('fermeture-vue', '1');
+function fermerPopupAlerte() {
+  if (alerteOverlay) alerteOverlay.classList.remove('visible');
+  sessionStorage.setItem('alerte-vue', '1');
 }
 
-if (fermetureClose) fermetureClose.addEventListener('click', fermerPopupFermeture);
-if (fermetureBtn)   fermetureBtn.addEventListener('click', fermerPopupFermeture);
-if (fermetureOverlay) {
-  fermetureOverlay.addEventListener('click', e => { if (e.target === fermetureOverlay) fermerPopupFermeture(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') fermerPopupFermeture(); });
+if (alerteClose) alerteClose.addEventListener('click', fermerPopupAlerte);
+if (alerteBtn)   alerteBtn.addEventListener('click', fermerPopupAlerte);
+if (alerteOverlay) {
+  alerteOverlay.addEventListener('click', e => { if (e.target === alerteOverlay) fermerPopupAlerte(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') fermerPopupAlerte(); });
 }
 
-if (!sessionStorage.getItem('fermeture-vue')) {
-  fetch('data/fermetures.json')
+if (!sessionStorage.getItem('alerte-vue')) {
+  fetch('data/alertes.json')
     .then(res => res.json())
     .then(data => {
       const today  = new Date().toISOString().slice(0, 10);
       const active = (data.periodes || []).find(p => today >= p.debut && today <= p.fin);
-      if (!active || !fermetureOverlay) return;
+      if (!active || !alerteOverlay) return;
 
-      const titreEl = document.getElementById('fermeture-titre');
-      const msgEl   = document.getElementById('fermeture-message');
+      const titreEl = document.getElementById('alerte-titre');
+      const msgEl   = document.getElementById('alerte-message');
       if (titreEl) titreEl.textContent = active.titre;
       if (msgEl)   msgEl.textContent   = active.message;
 
-      fermetureOverlay.classList.add('visible');
+      alerteOverlay.classList.add('visible');
     });
 }

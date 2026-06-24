@@ -1161,9 +1161,9 @@ footer {
 }
 
 /* ============================================================
-   POPUP FERMETURE TEMPORAIRE
+   POPUP ALERTE
    ============================================================ */
-.fermeture-overlay {
+.alerte-overlay {
   position: fixed;
   inset: 0;
   background: rgba(46, 58, 74, 0.6);
@@ -1178,12 +1178,12 @@ footer {
   transition: opacity 0.3s;
 }
 
-.fermeture-overlay.visible {
+.alerte-overlay.visible {
   opacity: 1;
   pointer-events: auto;
 }
 
-.fermeture-card {
+.alerte-card {
   background: var(--creme);
   border-radius: 24px;
   border-top: 5px solid var(--rose);
@@ -1195,7 +1195,7 @@ footer {
   text-align: center;
 }
 
-.fermeture-icone {
+.alerte-icone {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1207,14 +1207,14 @@ footer {
   margin: 0 auto 20px;
 }
 
-.fermeture-titre {
+.alerte-titre {
   font-family: var(--font-display);
   font-size: 1.6rem;
   color: var(--bleu);
   margin-bottom: 14px;
 }
 
-.fermeture-message {
+.alerte-message {
   font-family: var(--font-body);
   font-size: 15px;
   color: var(--texte);
@@ -1222,7 +1222,7 @@ footer {
   margin-bottom: 24px;
 }
 
-.fermeture-btn {
+.alerte-btn {
   width: 100%;
   justify-content: center;
 }
