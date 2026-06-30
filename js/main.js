@@ -49,26 +49,34 @@ fetch('data/carte.json')
   });
 
 
+
+
+
+
 // --- Carrousels ---
 document.querySelectorAll('.carrousel').forEach(carrousel => {
-  const piste    = carrousel.querySelector('.carrousel__piste');
-  const points   = carrousel.querySelectorAll('.carrousel__point');
-  const nbSlides = carrousel.querySelectorAll('.carrousel__piste img').length;
-  let index = 0;
-
-  function allerA(i) {
-    index = (i + nbSlides) % nbSlides;
-    piste.style.transform = `translateX(-${index * 100}%)`;
-    points.forEach((p, j) => p.classList.toggle('carrousel__point--actif', j === index));
+  const piste   = carrousel.querySelector('.carrousel__piste');
+  const points  = carrousel.querySelectorAll('.carrousel__point');
+  const btnPrev = carrousel.querySelector('.carrousel__btn--prev');
+  const btnNext = carrousel.querySelector('.carrousel__btn--next');
+  const nb      = piste.querySelectorAll('img').length;
+  function indexActuel() {
+    return Math.round(piste.scrollLeft / piste.clientWidth);
   }
 
-  carrousel.querySelector('.carrousel__btn--prev').addEventListener('click', () => allerA(index - 1));
-  carrousel.querySelector('.carrousel__btn--next').addEventListener('click', () => allerA(index + 1));
+  function allerA(i) {
+    piste.scrollTo({ left: ((i + nb) % nb) * piste.clientWidth, behavior: 'smooth' });
+  }
 
-  setInterval(() => allerA(index + 1), 4000);
+  function majPoints() {
+    const idx = indexActuel();
+    points.forEach((p, j) => p.classList.toggle('carrousel__point--actif', j === idx));
+  }
+
+  if (btnPrev) btnPrev.addEventListener('click', () => allerA(indexActuel() - 1));
+  if (btnNext) btnNext.addEventListener('click', () => allerA(indexActuel() + 1));
+  piste.addEventListener('scroll', majPoints, { passive: true });
 });
-
-
 
 
 // --- Popup mentions légales ---
@@ -112,6 +120,50 @@ if (alerteOverlay) {
   alerteOverlay.addEventListener('click', e => { if (e.target === alerteOverlay) fermerPopupAlerte(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') fermerPopupAlerte(); });
 }
+
+// --- Avis Google ---
+function renderEtoiles(note) {
+  const n = Math.round(note);
+  return '★'.repeat(n) + '☆'.repeat(5 - n);
+}
+
+fetch('data/avis.json')
+  .then(res => res.json())
+  .then(data => {
+    const noteEl  = document.getElementById('avis-note');
+    const etEl    = document.getElementById('avis-etoiles-globales');
+    const countEl = document.getElementById('avis-count');
+    const majEl   = document.getElementById('avis-maj');
+    const lienEl  = document.getElementById('avis-lien-maps');
+    const grid    = document.getElementById('avis-grid');
+
+    if (noteEl)  noteEl.textContent  = data.note.toFixed(1).replace('.', ',');
+    if (etEl)    etEl.textContent    = renderEtoiles(data.note);
+    if (countEl) countEl.textContent = `${data.total} avis Google`;
+    if (majEl && data.date_maj) majEl.textContent = `Mis à jour : ${data.date_maj}`;
+    if (lienEl && data.lien_maps) lienEl.href = data.lien_maps;
+
+    if (!grid) return;
+
+    const couleurs = ['#4F729B', '#D98883', '#7a9cbf'];
+    grid.innerHTML = data.avis.map((avis, i) => {
+      const mots     = avis.auteur.trim().split(/\s+/);
+      const initiales = (mots[0][0] + (mots[1] ? mots[1][0] : '')).toUpperCase();
+      const couleur  = couleurs[i % couleurs.length];
+      return `<div class="review-card">
+        <div class="review-card__header">
+          <div class="review-card__avatar" style="background:${couleur};">${initiales}</div>
+          <div class="review-card__meta">
+            <span class="review-card__nom">${avis.auteur}</span>
+            <span class="review-card__date">${avis.date}</span>
+          </div>
+        </div>
+        <div class="review-card__etoiles">${renderEtoiles(avis.note)}</div>
+        <p class="review-card__texte">${avis.texte}</p>
+      </div>`;
+    }).join('');
+  });
+
 
 if (!sessionStorage.getItem('alerte-vue')) {
   fetch('data/alertes.json')

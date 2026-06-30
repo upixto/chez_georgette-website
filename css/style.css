@@ -212,14 +212,20 @@ a { text-decoration: none; }
 .carrousel__piste {
   display: flex;
   height: 100%;
-  transition: transform 0.4s ease;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
 }
+
+.carrousel__piste::-webkit-scrollbar { display: none; }
 
 .carrousel__piste img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   flex-shrink: 0;
+  scroll-snap-align: start;
 }
 
 .carrousel__btn {
@@ -243,6 +249,10 @@ a { text-decoration: none; }
 
 .carrousel__btn--prev { left: 10px; }
 .carrousel__btn--next { right: 10px; }
+
+@media (max-width: 680px) {
+  .carrousel__btn { display: none; }
+}
 
 .carrousel__points {
   position: absolute;
@@ -1049,23 +1059,6 @@ footer {
 
 .footer__adresse { margin-bottom: 6px; }
 
-.footer__avis {
-  display: inline-block;
-  margin-bottom: 14px;
-  font-family: var(--font-body);
-  font-size: 12px;
-  font-weight: 700;
-  color: #FFF6E1;
-  background: rgba(255,246,225,0.08);
-  border: 1px solid rgba(255,246,225,0.2);
-  padding: 6px 16px;
-  border-radius: 50px;
-  transition: background 0.2s;
-}
-
-.footer__avis:hover {
-  background: rgba(255,246,225,0.16);
-}
 
 /* ============================================================
    POPUP MENTIONS LÉGALES
@@ -1267,3 +1260,166 @@ footer {
 }
 
 .flex-col { display: flex; flex-direction: column; gap: 9px; }
+
+/* ============================================================
+   SECTION AVIS GOOGLE
+   ============================================================ */
+.avis-section { background: var(--bleu); }
+
+.avis-intro {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.avis-intro h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 4vw, 2.8rem);
+  color: var(--creme);
+  line-height: 1.1;
+  margin-bottom: 24px;
+}
+
+.avis-note-globale {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(255, 246, 225, 0.10);
+  border: 1.5px solid rgba(255, 246, 225, 0.22);
+  border-radius: 20px;
+  padding: 16px 28px;
+  color: inherit;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.avis-note-globale:hover { background: rgba(255, 246, 225, 0.18); }
+
+.avis-note-num {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: var(--creme);
+  line-height: 1;
+}
+
+.avis-note-details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.avis-etoiles-globales {
+  color: #F5C842;
+  font-size: 20px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.avis-count {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--bleu-pale);
+  font-weight: 600;
+}
+
+.avis-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+@media (max-width: 860px) {
+  .avis-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 640px) {
+  .avis-grid {
+    display: flex;
+    grid-template-columns: unset;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 12px;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+  .avis-grid::-webkit-scrollbar { display: none; }
+  .review-card {
+    scroll-snap-align: start;
+    flex: 0 0 calc(100% - 32px);
+  }
+}
+
+.review-card {
+  background: var(--creme);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-card__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.review-card__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: var(--creme);
+  font-family: var(--font-display);
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.review-card__meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.review-card__nom {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--texte);
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.review-card__date {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--texte-doux);
+  display: block;
+}
+
+.review-card__etoiles {
+  color: #F5C842;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+
+.review-card__texte {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--texte);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.avis-maj {
+  font-family: var(--font-body);
+  font-size: 11px;
+  color: var(--bleu-pale);
+  margin-top: 10px;
+}
+
+.avis-cta { text-align: center; }

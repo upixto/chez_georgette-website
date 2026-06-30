@@ -134,6 +134,13 @@
   </div>
 
   <script>
+    fetch('data/avis.json')
+      .then(res => res.json())
+      .then(data => {
+        const btn = document.getElementById('btn-avis');
+        if (btn && data.lien_avis) btn.href = data.lien_avis;
+      });
+
     document.getElementById('btn-avis').addEventListener('click', () => {
       document.getElementById('btn-avis').style.display = 'none';
       document.getElementById('merci').classList.add('visible');
