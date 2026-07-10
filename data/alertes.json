@@ -17,6 +17,18 @@
       "fin": "2026-07-22",
       "titre": "Fermeture exceptionnelle",
       "message": "Le salon sera fermé du 20 au 22 juillet 2026 inclus. Nous vous retrouvons avec plaisir dès le jeudi 23 juillet !"
+    },
+    {
+      "debut": "2026-07-10",
+      "fin": "2026-07-12",
+      "titre": "Fortes chaleurs",
+      "message": "En raison des fortes chaleurs prévues jusqu'au dimanche 12 juillet, le salon de thé sera potentiellement amené à modifier ses horaires. Merci de votre compréhension."
+    },
+    {
+      "debut": "2026-07-13",
+      "fin": "2026-07-14",
+      "titre": "Ouverture exceptionnelle",
+      "message": "Le salon sera ouvert le mardi 14 juillet 2026 et proposera une formule salée. Au plaisir de vous accueillir."
     }
   ]
 }
