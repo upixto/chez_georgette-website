@@ -29,6 +29,12 @@
       "fin": "2026-07-14",
       "titre": "Ouverture exceptionnelle",
       "message": "Le salon sera ouvert le mardi 14 juillet 2026 et proposera une formule salée. Au plaisir de vous accueillir."
-    }
+    },
+	{
+	  "debut": "2026-08-17",
+	  "fin": "2026-08-26",
+	  "titre": "Fermeture estivale",
+	  "message": "Le salon sera fermé pour congés d'été du 17 au 26 août 2026 inclus. Nous vous retrouverons avec plaisir dès le jeudi 27 août !"
+	}
   ]
 }
